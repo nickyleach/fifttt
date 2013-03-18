@@ -1,0 +1,13 @@
+<h1><%= @user.name %></h1>
+
+<h2>Linked Accounts</h2>
+<ul>
+<% @authorizations.each do |authorization| %>
+	<li><%= authorization[:provider] %></li>
+<% end %>
+</ul>
+
+<h2>Bookmarklet</h2>
+<p>
+	<a href="javascript:(function(){function fifttt(){var d=document,z=d.createElement('scr'+'ipt'),b=d.body;try{if(!b)throw(0);z.setAttribute('src','http://127.0.0.1:3000/bookmarklet.js?t='+(new Date().getTime()));b.appendChild(z);}catch(e){alert('Please wait until the page has loaded.');}}fifttt();})();">FIFTTT</a>
+</p>

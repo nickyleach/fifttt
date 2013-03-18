@@ -1,0 +1,8 @@
+<h1>Post</h1>
+<p>The following text will be posted:</p>
+
+<%= form_tag "/services" do %>
+  <%= text_area_tag 'content' %>
+  <%= submit_tag 'Post with Twitter' %>
+  <%= button_tag 'Nevermind...', :type => 'reset' %>
+<% end %>
